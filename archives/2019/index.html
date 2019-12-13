@@ -84,6 +84,16 @@
     <header class="archive-article-header">
       <a href="/2019/12/09/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9/" class="archive-article-date">
   <time datetime="2019-12-09T15:35:36.128Z" itemprop="datePublished">12月 9</time>
+
+{%if post.updated and post.updated > post.date%}
+  <span class="post-updated">
+    &nbsp; | &nbsp; {{ __('post.updated') }}
+    <time itemprop="dateUpdated" datetime="{{ moment(post.updated).format() }}" content="{{ date(post.updated, config.date_format) }}">
+      {{ date(post.updated, config.date_format) }}
+    </time>
+  </span>
+{% endif %}
+
 </a>
       
   

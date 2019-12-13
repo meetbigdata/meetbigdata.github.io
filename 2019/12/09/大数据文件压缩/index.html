@@ -75,6 +75,16 @@
   <div class="article-meta">
     <a href="/2019/12/09/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9/" class="article-date">
   <time datetime="2019-12-09T15:35:36.128Z" itemprop="datePublished">2019-12-09</time>
+
+{%if post.updated and post.updated > post.date%}
+  <span class="post-updated">
+    &nbsp; | &nbsp; {{ __('post.updated') }}
+    <time itemprop="dateUpdated" datetime="{{ moment(post.updated).format() }}" content="{{ date(post.updated, config.date_format) }}">
+      {{ date(post.updated, config.date_format) }}
+    </time>
+  </span>
+{% endif %}
+
 </a>
     
   </div>
@@ -99,7 +109,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/12/09/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9/" data-id="ck444efup0000f8qx2tfi3plv" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/12/09/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9/" data-id="ck445dwjq0000fgqx38e684g8" class="article-share-link">Share</a>
       
       
     </footer>
