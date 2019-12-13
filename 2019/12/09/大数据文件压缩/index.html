@@ -7,18 +7,18 @@
   
   <title>大数据文件压缩 | 海盗大叔</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="title: 大数据文件压缩tags: 大数据，文件压缩    为什么要进行文件压缩？文件压缩的重点？压缩的好处和坏处？文件的压缩可以看成是资源的优化，我们主要考虑时间&#x2F;空间协调性，急速的压缩时间则牺牲部分压缩空间，极小的压缩存储空间就必须牺牲压缩时间，大数据需要考虑1、时效性；2、存储大小；3、数据是否可以sqlit进行分块处理各种压缩格式时效性对比：各种压缩格式占用空间大小对比：文件切块说明：">
+  <meta name="description" content="title: 大数据文件压缩tags: 大数据，文件压缩data: 2017-10-3    为什么要进行文件压缩？文件压缩的重点？压缩的好处和坏处？文件的压缩可以看成是资源的优化，我们主要考虑时间&#x2F;空间协调性，急速的压缩时间则牺牲部分压缩空间，极小的压缩存储空间就必须牺牲压缩时间，大数据需要考虑1、时效性；2、存储大小；3、数据是否可以sqlit进行分块处理各种压缩格式时效性对比：各种压缩格式占">
 <meta name="keywords" content="大数据,hdoop,hbse,mapreduce,spark,hive,java,sqle">
 <meta property="og:type" content="article">
 <meta property="og:title" content="大数据文件压缩">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;09&#x2F;%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9&#x2F;index.html">
 <meta property="og:site_name" content="海盗大叔">
-<meta property="og:description" content="title: 大数据文件压缩tags: 大数据，文件压缩    为什么要进行文件压缩？文件压缩的重点？压缩的好处和坏处？文件的压缩可以看成是资源的优化，我们主要考虑时间&#x2F;空间协调性，急速的压缩时间则牺牲部分压缩空间，极小的压缩存储空间就必须牺牲压缩时间，大数据需要考虑1、时效性；2、存储大小；3、数据是否可以sqlit进行分块处理各种压缩格式时效性对比：各种压缩格式占用空间大小对比：文件切块说明：">
+<meta property="og:description" content="title: 大数据文件压缩tags: 大数据，文件压缩data: 2017-10-3    为什么要进行文件压缩？文件压缩的重点？压缩的好处和坏处？文件的压缩可以看成是资源的优化，我们主要考虑时间&#x2F;空间协调性，急速的压缩时间则牺牲部分压缩空间，极小的压缩存储空间就必须牺牲压缩时间，大数据需要考虑1、时效性；2、存储大小；3、数据是否可以sqlit进行分块处理各种压缩格式时效性对比：各种压缩格式占">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;09&#x2F;%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9&#x2F;images&#x2F;yssx.JPG">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;09&#x2F;%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9&#x2F;images&#x2F;ysb.JPG">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;09&#x2F;%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9&#x2F;images&#x2F;%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6.JPG">
-<meta property="og:updated_time" content="2019-12-09T15:51:27.407Z">
+<meta property="og:updated_time" content="2019-12-13T13:13:24.531Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;09&#x2F;%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9&#x2F;images&#x2F;yssx.JPG">
   
@@ -93,13 +93,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>title: 大数据文件压缩<br>tags: 大数据，文件压缩</p>
+        <p>title: 大数据文件压缩<br>tags: 大数据，文件压缩<br>data: 2017-10-3</p>
 <p>   为什么要进行文件压缩？文件压缩的重点？压缩的好处和坏处？<br>文件的压缩可以看成是资源的优化，我们主要考虑时间/空间协调性，急速的压缩时间则牺牲部分压缩空间，极小的压缩存储空间就必须牺牲压缩时间，大数据需要考虑<br>1、时效性；2、存储大小；3、数据是否可以sqlit进行分块处理<br>各种压缩格式时效性对比：<br><img src="./images/yssx.JPG" alt="enter description here"><br>各种压缩格式占用空间大小对比：<br><img src="./images/ysb.JPG" alt="enter description here"><br>文件切块说明：<br><img src="./images/%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6.JPG" alt="enter description here"></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/12/09/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9/" data-id="ck445ws4r0001jwqxgryl3pkj" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/12/09/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6%E5%8E%8B%E7%BC%A9/" data-id="ck446a0b40001csqxbkebcit8" class="article-share-link">Share</a>
       
       
     </footer>
